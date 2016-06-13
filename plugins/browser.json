@@ -1,0 +1,51 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.aedos.verificacionfirma"
+        }
+    },
+    "dependent_plugins": {}
+}

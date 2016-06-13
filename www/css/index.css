@@ -1,0 +1,92 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	margin: 0;
+}
+
+html{
+	position: relative;
+    min-height: 100%;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background: -webkit-linear-gradient(left,yellow,blue,red);
+   
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:14px;
+    height:100%;
+    margin:0;
+    padding:0px;
+    width:100%;
+}
+
+.app{
+	width: 90%;
+	margin: 80px auto -160px auto;
+	text-align: center;
+	color: #FFF;
+	min-height: 100%;
+}
+
+.app input{
+	margin-top: 15px;
+	height: 30px;
+}
+
+.app button{
+	color: white;
+	height: 35px;
+	width: 100px;
+	border-radius: 10px;
+	padding: 5px;
+	margin-left: 5px;
+   background: #4c4cff;
+   font-weight: bold;
+}
+
+.app-footer{
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;	
+}
+
+.footer-content{
+	background-color: #fff;
+    background-color: rgba(255,255,255,0.6);
+	border-radius: 10px;	
+	width: 90%;
+	height: 70px;
+	margin: 0 auto 0 auto;    
+}
+
+.footer-content p{
+	transform: translateY(-25%);
+	top: 25%;
+	position:relative;
+}
+
+.resultado{
+	margin-top: 20px;
+}
+
+.logo-ad span{
+	display: none;
+}
+
+.logo-ad{
+	width: 200px;
+	height: 200px;
+	margin: 50px auto 0 auto;
+	background-image: url("../res/img/ad.jpg");
+    background-color: #cccccc;
+	background-size: 200px;
+	border-radius: 15px;
+}

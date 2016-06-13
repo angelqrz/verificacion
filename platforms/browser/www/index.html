@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Verificacion de Firma</title>
+</head>
+
+<body>
+    <div class="app">
+       <h1>Verificación de Firma</h1>
+	   <input type="number" name="cedula" maxlength=12 size=14 placeholder="Ingrese cédula"/>
+	   <button id="verificar-cedula">Verificar</button>
+	   <div class="resultado">
+			<p></p>
+	   </div>	
+		<div class="logo-ad">
+			<span>AD</span>
+		</div>		
+    </div>
+	<footer class="app-footer">
+		<div class="footer-content">
+			<p>Secretaría de Profesionales y técnicos</p>
+			<p>Junín, Estado Táchira</p>
+		</div>
+	</footer>
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+		$(document).ready(function(){
+			$('#verificar-cedula').click(function(){
+				var cedula = $('input[name=cedula]').val();
+				var url = 'http://cne.gov.ve/web/registro_electoral/firmantes.php?nacionalidad=V&cedula='+cedula;
+				$.get(url,function(result){
+					if(result.indexOf('no se encuentra registrado en las planillas entregadas al CNE')>-1){
+						$('.resultado p').text('Cédula no se encuentra en el listado de firmantes');
+					}else if(result.indexOf('Registro para el elector')>-1){
+						$('.resultado p').text('Cédula se encuentra en el listado de firmantes, puede dirigirse a validar su firma');
+					}
+				}).error(function(result){
+					$('.resultado p').text('Error de comunicación con el CNE');
+				});				
+			});
+		});
+    </script>
+</body>
+
+</html>
